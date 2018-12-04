@@ -1,0 +1,50 @@
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  /* justify-content: flex-start; */
+  align-items: stretch;
+  align-content: stretch;
+}
+.rooms {
+  width: 15%;
+  flex-wrap: wrap;
+  height: 20vh;
+  background-color: slategrey;
+  opacity: 0.85;
+  margin: 20px;
+  /* flex-direction: row;  */
+  box-shadow: 0 8px 6px -6px slategray;
+  justify-content: center;
+  padding: 10px;
+}
+.card-title {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: space-between;
+}
+.guests {
+  position: relative;
+  width: 95%;
+  height: 100px;
+  background-color: white;
+  margin: auto;
+  margin-top: 15px;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: stretch;
+  align-content: stretch;
+ 
+}
+.Guest-Specs {
+  font-size: 18px;
+  /* justify-content: space-between; */
+  margin-left: 15px;
+  margin-right: 15px;
+}
