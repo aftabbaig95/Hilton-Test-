@@ -14,51 +14,61 @@ export default class Checkbox extends Component {
   }
   
   handleCheck() {
-    // if(this.props.number >2 && this.state.checked === true){
     this.setState({ checked: !this.state.checked });
-    // document.getElementById(this.props.number);
     if(this.props.number === "3" ){
       
     document.getElementById("2").checked =  !document.getElementById("2").checked
     console.log(document.getElementById("2").checked);
   }
-    //  document.getElementById("two").disabled =  !document.getElementById("two").disabled
-    //  document.getElementById("two-child").disabled=  !document.getElementById("two-child").disabled
     else if(this.props.number === "4" ){
       document.getElementById("2").checked =  !document.getElementById("2").checked
-      // document.getElementById("two").disabled =  !document.getElementById("two").disabled
-      // document.getElementById("two-child").disabled=  !document.getElementById("two-child").disabled
-
       document.getElementById("3").checked =  !document.getElementById("3").checked
-      // document.getElementById("three").disabled =  !document.getElementById("three").disabled
-      // document.getElementById("three-child").disabled=  !document.getElementById("three-child").disabled
      }
     
   }
   handleDisable(){ 
     console.log(document.getElementById(this.props.number).checked, this.props.number);
 
-    if(document.getElementById("2").checked === true){
-      document.getElementById(this.props.adult).disabled = false
-        document.getElementById(this.props.child).disabled = false 
-    }
-    if(document.getElementById("3").checked === true){
-      document.getElementById(this.props.adult).disabled = false
-        document.getElementById(this.props.child).disabled = false 
-    }
-    if(document.getElementById("4").checked === true){
-      document.getElementById(this.props.adult).disabled = false
-        document.getElementById(this.props.child).disabled = false 
-    }
-    // if(document.getElementById(this.props.number).checked === true){
-    //   document.getElementById(this.props.adult).disabled = !true
-    //   document.getElementById(this.props.child).disabled = !true    }
-    // else if(document.getElementById(this.props.number).checked === false){
-      
-    //   document.getElementById(this.props.adult).disabled = !false
-    //    document.getElementById(this.props.child).disabled = !false
+    this.setState({ checked: !this.state.checked });
+    if(this.props.number === "3" && document.getElementById("3").checked === true){
+    document.getElementById("2").checked =  true
+  }
+   else if(this.props.number === "4" && document.getElementById("4").checked === true ){
+      document.getElementById("2").checked =  true
+      document.getElementById("3").checked =  true
+     }
 
-    // }
+
+    if(document.getElementById("2").checked === true){
+      document.getElementById("two").disabled = false
+        document.getElementById("two-child").disabled = false 
+    }
+    else if (document.getElementById("2").checked === false){
+      document.getElementById("two").disabled = true
+        document.getElementById("two-child").disabled = true 
+    }
+
+    if(document.getElementById("3").checked === true){
+      document.getElementById("three").disabled = false
+        document.getElementById("three-child").disabled = false 
+    }
+    else if (document.getElementById("3").checked === false){
+      document.getElementById("three").disabled = true
+        document.getElementById("three-child").disabled = true 
+    }
+
+    if(document.getElementById("4").checked === true){
+      document.getElementById("four").disabled = false
+        document.getElementById("four-child").disabled = false 
+    }
+    else if (document.getElementById("4").checked === false){
+      document.getElementById("four").disabled = true
+        document.getElementById("four-child").disabled = true 
+    }
+  
+  }
+  handleSubmit(){ 
+
   }
  
   render() {
@@ -70,7 +80,6 @@ export default class Checkbox extends Component {
       msg = "room unchecked" + this.props.number;
       console.log(msg);
     }
-    // var x =document.getElementById(this.props.number).checked
     
     return (
       <div>
@@ -100,6 +109,7 @@ export default class Checkbox extends Component {
                   <option value="2">2</option>
                 </select>
               </div>
+
             </div>
       </div>
     );

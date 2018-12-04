@@ -61,6 +61,7 @@ export default class Cards extends Component {
             </div>
           </div>
         </div>
+        <button onClick={this.handleSubmit}>Submit</button>
       </div>
     );
   }
